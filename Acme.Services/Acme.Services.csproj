@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Acme.Data.DBRepository\Acme.Data.DBRepository.csproj" />
+    <ProjectReference Include="..\Acme.Services.Repository\Acme.Services.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
