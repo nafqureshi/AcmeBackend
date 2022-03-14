@@ -21,5 +21,12 @@ Please get back to me if you have any concerns and I would gladly like to clarif
 
 Note: There was a confusion in the way the get api call for users needed to be implemented so i have integrated 2 calls and am using just the getall call on the ui
 
-Kind Regards,
-Abdun Nafay Qureshi
+This is how the calls look on swagger:
+
+![image](https://user-images.githubusercontent.com/18323824/158108813-8eb92df0-d155-475d-844e-9c4d137cb432.png)
+
+![image](https://user-images.githubusercontent.com/18323824/158108836-795ff6d9-4d34-49cb-941b-dba363689b3d.png)
+
+![image](https://user-images.githubusercontent.com/18323824/158108869-48576b46-8999-49c3-ad24-61deefd6fd14.png)
+
+![image](https://user-images.githubusercontent.com/18323824/158109070-4b37f99f-7ea6-4d29-86f3-c783187543d5.png)
