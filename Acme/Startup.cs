@@ -31,6 +31,13 @@ namespace Acme
             //Setup InMemoryDB
             services.AddDbContext<DbContext>(opts => opts.UseInMemoryDatabase("UserActivityDB"));
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:3000")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -54,6 +61,8 @@ namespace Acme
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Acme v1"));
             }
 
+            app.UseCors("MyPolicy");
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -64,6 +73,7 @@ namespace Acme
             {
                 endpoints.MapControllers();
             });
+
         }
 
         private void RegisterApplicationComponents(IServiceCollection services)

@@ -2,6 +2,7 @@
 using Acme.Services.Repository.Abstract.ServiceAbstract;
 using Acme.Services.Repository.Entity;
 using Acme.Shared.Enum;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -28,7 +29,7 @@ namespace Acme.Controllers
         }
 
         [HttpGet]
-        [Route("get/activity/{activity}")]
+        [Route("{activity}/get")]
         public List<ActivitySignup> GetUsersActivityWise(ActivityEnum activity)
         {
             return ActivitySignupService.GetUsersActivityWise(activity);
